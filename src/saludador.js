@@ -2,12 +2,12 @@ export function saludar(nombre) {
   return nombre;
 }
 
-export function saludoPersonalizado(nombre, edad, genero, hora) {
+export function saludoPersonalizadoESP(nombre, edad, genero, hora) {
   let saludo = "";
   if(hora < 12 && hora > 5) {
     saludo += "<p>Buenos días,";
   }
-  else if(hora < 19){
+  else if(hora < 19 && hora > 11){
     saludo += "<p>Buenas tardes,";
   }
   else {
@@ -33,3 +33,33 @@ export function saludoPersonalizado(nombre, edad, genero, hora) {
   return saludo;
 }
 
+export function saludoPersonalizadoENG(nombre, edad, genero, hora) {
+  let saludo = "";
+  if(hora < 12 && hora > 5) {
+    saludo += "<p>Good morning,";
+  }
+  else if(hora < 19 && hora > 11){
+    saludo += "<p>Good afternoon,";
+  }
+  else {
+    saludo += "<p>Good night,";
+  }
+  if(edad > 30) {
+    if(genero === "masculino") {
+        saludo += " Mr. ";
+      }
+    if(genero === "femenino") {
+        saludo += " Mrs. ";
+    }
+  }
+  else {
+    if(genero === "masculino") {
+        saludo += " Mr. ";
+      }
+    if(genero === "femenino") {
+        saludo += " Ms. ";
+    }
+  }
+  saludo = saludo + nombre + "</p>";
+  return saludo;
+}
