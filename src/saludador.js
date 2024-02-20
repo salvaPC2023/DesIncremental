@@ -63,3 +63,34 @@ export function saludoPersonalizadoENG(nombre, edad, genero, hora) {
   saludo = saludo + nombre + "</p>";
   return saludo;
 }
+
+export function saludoPersonalizadoGER(nombre, edad, genero, hora) {
+  let saludo = "";
+  if(hora < 12 && hora > 5) {
+    saludo += "<p>Guten Morgen,";
+  }
+  else if(hora < 19 && hora > 11){
+    saludo += "<p>Guten Tag,";
+  }
+  else {
+    saludo += "<p>Gute Nacht,";
+  }
+  if(edad > 30) {
+    if(genero === "masculino") {
+        saludo += " Herr. ";
+      }
+    if(genero === "femenino") {
+        saludo += " Frau. ";
+    }
+  }
+  else {
+    if(genero === "masculino") {
+      saludo += " Herr. ";
+    }
+    if(genero === "femenino") {
+        saludo += " Frau. ";
+    }
+  }
+  saludo = saludo + nombre + "</p>";
+  return saludo;
+}
