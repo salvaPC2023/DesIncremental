@@ -1,4 +1,4 @@
-import { saludoPersonalizadoESP, saludoPersonalizadoENG } from "./saludador";
+import { saludoPersonalizadoESP, saludoPersonalizadoENG, saludoPersonalizadoGER } from "./saludador";
 
 const nombre_input = document.querySelector("#nombre");
 const edad_input = document.querySelector("#edad");
