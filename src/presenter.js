@@ -12,6 +12,8 @@ form.addEventListener("submit", (event) => {
   const nombre = nombre_input.value;
   const edad = edad_input.value;
   const genero = genero_input.value;
-  let saludo = saludoPersonalizado(nombre, edad, genero);
+  let fecha = new Date();
+  let hora = fecha.getHours();
+  let saludo = saludoPersonalizado(nombre, edad, genero, hora);
   div.innerHTML = saludo;
 });
